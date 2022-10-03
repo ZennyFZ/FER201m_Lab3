@@ -1,0 +1,343 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+*{
+  margin:0;
+}
+
+.navi{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  padding: 2px;
+  margin-bottom: 2%;
+  list-style-type: none;
+}
+
+.logo{
+  width: 50px;
+  height: 50px;
+}
+
+.navi li{
+  display: inline;
+  padding: 10px;
+}
+
+.navi li:not(:first-child) a{
+  padding: 10px;
+  text-decoration: none;
+}
+
+.navi li:not(:first-child) a:hover{
+  background-color: #ecbf20;
+}
+
+.navi li a:visited {
+  color: inherit;
+}
+
+.navi .icon{
+  display: none;
+}
+
+.container::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column{
+  float: left;
+  width: 33.33%;
+}
+
+img{
+  width: 100%;
+}
+
+.image-detail{
+  text-align: center;
+
+}
+
+.title-detail{
+  text-align: center;
+  padding: 0;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.film-details{
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+  width: 45%;
+}
+
+.imageDetail{
+  width: 40%;
+  height: 40%;
+}
+
+.About{
+  text-align: center;
+  margin: auto;
+}
+
+.About0{
+  width: 700px;
+  height: 400px;
+}
+
+.About1{
+  margin: auto;
+  text-align: center;
+  font-size: 50px;
+  width: 45%;
+}
+
+.About2{
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+  width: 45%;
+}
+.cutitle{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  color: black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.contactBox{
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.news:not(:last-child){
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}
+
+.newsImage{
+  width: 100%;
+  height: 100%;
+}
+
+.newsDescription{
+  text-align: left;
+  margin: auto;
+  width: 60%;
+}
+
+.movie{
+  padding: 10px;
+  text-align: center;
+  background-color: #3d4048;
+  height: 100%;
+  color: white;
+  margin: 10px;
+}
+
+.button{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 500ms;
+  visibility: hidden;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay .popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.overlay .popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.overlay .popup .close:hover {
+  color: #06D85F;
+}
+
+.overlay .popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+footer{
+  text-align: center;
+  padding: 10px;
+  margin-top: 2%;
+}
+
+.overlay .popup img{
+  width: 70%;
+}
+
+@media screen and (max-width: 700px){
+  .column{
+    width: 100%;
+  }
+
+  .overlay .popup{
+    width: 70%;
+  }
+
+  .overlay .popup img{
+    width: 100%;
+  }
+
+  .button{
+    width: 100%;
+  }
+
+  .movie{
+    margin: 0;
+  }
+
+  .navi{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navi li{
+    display: block;
+    padding: 10px;
+  }
+
+  .switch-mode{
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .column{
+    width: 50%;
+  }
+
+  .overlay .popup{
+    width: 50%;
+  }
+
+  .overlay .popup img{
+    width: 100%;
+  }
+
+  .button{
+    width: 100%;
+  }
+
+  .movie{
+    margin: 0;
+  }
+
+  .navi{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navi li{
+    display: block;
+    padding: 10px;
+  }
+  
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
